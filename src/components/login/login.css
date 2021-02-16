@@ -20,5 +20,6 @@ flex-direction: column;
 #btn1,#btn2{
     width:100px ;
     margin: auto;
+    margin-bottom:10px;
     
 }
