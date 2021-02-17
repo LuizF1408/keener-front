@@ -1,16 +1,7 @@
 import React, { useState } from "react"
-import {Login,Cadastrar} from './js/User'
+import {Link} from 'react-router-dom'
+import {Login} from './js/User'
 import "./login.css"
-
-
-
-
-
-
-
-
-
-
 
    
     const LoginScreen = ({ history }) => {
@@ -36,18 +27,11 @@ import "./login.css"
             }
         };
 
-        const signIn = async () =>{
-
-            await Cadastrar(user, password);
-
-
-
-        }
-
+      
 
         return (
 
-            <div className="container">
+            <div className="containerLogin">
                 <label id="lbl1">
                     Username
             <input type="text" name="username" onChange={(e) => { setUser(e.target.value) }} />
@@ -57,7 +41,7 @@ import "./login.css"
             <input type="password" name="password" onChange={(e) => { setPassword(e.target.value) }} />
                 </label>
                 <input id="btn1" type="submit" value="Entrar" onClick={doLogin} />
-                <input id="btn2" type="submit" value="Cadastrar" onClick={signIn} />
+               <Link id="btn1" to="/signup"><input  type="submit" value="Cadastro"/></Link>
             </div>
 
         )

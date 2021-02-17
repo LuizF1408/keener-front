@@ -1,0 +1,18 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    
+    width: 250px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.card span{
+
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    
+}

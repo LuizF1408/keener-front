@@ -1,0 +1,13 @@
+.containerProducts h1{
+    text-align: center;
+
+
+}
+
+.cards{
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+
+}
