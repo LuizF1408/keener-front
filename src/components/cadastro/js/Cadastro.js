@@ -4,16 +4,23 @@ export async function Cadastrar(username,password) {
 
   
 
-const resp = await axios.post(`${baseURL}/user/create`,{username,password});
+
 try {
+   await axios.post(`${baseURL}/user/create`,{username,password});
     alert("Cadastro realizado!") 
+    const login = true
+    return login
 } 
 catch (e) {
-    alert("Cadastro não realizado" + e.message)
+    console.log(e)
+    alert("Cadastro não realizado (username já existe!)" )
+    
+
+    
 }
 
 
 
-return resp
+
 
 }

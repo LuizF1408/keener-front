@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react"
 import axios from "axios";
 import Card from "./card/Card";
 import "./products.css";
-
+import Button from "../component/Button"
+import {Link} from "react-router-dom"
 
 export default function Products() {
 
@@ -26,7 +27,9 @@ useEffect(()=>{
 
         })
         console.log(data)
+         // eslint-disable-next-line 
     },[])
+   
 const listItens = data.map((card)=>
 <div><Card name={card.name} 
 type={card.type}
@@ -44,6 +47,14 @@ qtd={card.qtd}
         <div className="containerProducts">
 
             <h1>Produtos</h1>
+            <div className="options">
+            < Link to="/app">
+            <Button desc="Tela Principal"/>
+            </Link>
+            < Link to="/signup/product">
+            <Button desc="Cadastrar Novo Produto"/>
+            </Link>
+            </div>
             <div className="cards">
                 {listItens}
             </div>

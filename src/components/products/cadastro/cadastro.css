@@ -1,0 +1,29 @@
+.modal{
+
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    
+    display: flex;
+    flex-direction: column; 
+}
+.modal input{
+
+    margin-bottom: 10px;
+}
+
+.modal .option{
+    display: flex;
+    flex-direction: row;
+
+
+
+    
+}
+
+#btn3{
+
+    width: 100px;
+    height: 35px;
+    margin-left: 60px;
+}
